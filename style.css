@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Gluten:wght@500&display=swap');
+
+@font-face {
+    font-family: 'Gluten', cursive;
+    src: url("https://fonts.googleapis.com/css2?family=Gluten:wght@500&display=swap");
+}
+
+/* Reset de página */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Gluten', cursive;
+    font-size: 16px;
+    background: #67d2f3;
+    color: black;
+    padding: 10px;
+}
+
+h1 { font-size: 1.5rem; 
+}
+
+form, table {
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 3px;
+}
+
+form { margin-top: 10px; }
+
+form fieldset {
+    padding: 8px;
+    border-radius: 10px;
+}
+
+form input, form button { height: 35px; border-radius: 5px; border: 1 px solid black; }
+
+form input {
+    font-family: 'Gluten', cursive;
+    width: 100%;
+    height: 35px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+form input:focus {
+    color: black;
+    background-color: rgb(32, 140, 202);
+    outline-color: gray;
+    outline-width: 5px;
+    border: none
+}
+
+form input:hover {
+    background-color: rgb(59, 160, 219);
+    color: white;
+    transition: all 0.3s ease-in;
+}
+
+form input:focus::placeholder { color: rgba(128, 128, 128, 0.4); }
+
+form button {
+    width: 25%;
+    height: 35px;
+    float: right;
+
+    color: white;
+    font-family: 'Gluten', cursive;
+    font-size: 0.9rem;
+    background-color: #817d7d;
+
+    border: 1px solid black;
+    border-radius: 2px;
+    outline: none;
+    cursor: pointer;
+    
+}
+
+form button[type="button"] { margin-right: 10px; }
+
+form button:hover {
+    background-color: rgb(73, 70, 70);
+    color: white;
+    transition: all 0.3s ease-in;
+}
+
+section { margin-top: 20px; }
+
+table {
+    border: 1px solid black;
+    font-size: 0.8rem;
+}
+
+table th, table td {
+    padding: 3px;
+    border: 1px solid black;
+}
+
+table th { font-weight: bold !important; }
+
+table thead tr {
+    background-color: black;
+    color: white;
+    
+}
+
+
+
+/* 
+    (odd) para linhas ímpares e 
+    (even) para linhas pares
+*/
+table tbody tr:nth-child(odd) { background-color: white; }
+
+table tbody tr:nth-child(even) { background-color: #05bac0f8; }
+
+table tbody { text-align: center; }
+
+
+table td:first-of-type { text-align: left; }
+
+/* tablets */
+
+@media screen and (min-width: 768px) {
+    
+    h1 { font-size: 2rem }
+
+    form, table { width: 80%; }
+
+    form fieldset { padding: 20px; border: 1px solid black;}
+
+    form fieldset legend {
+        font-size: 1.5rem;
+    }
+
+    form input, form button {
+        font-size: 1.5rem;
+        height: 40px;
+        
+    }
+    
+    table { font-size: 1.3rem; }
+
+    table th, table td { padding: 5px; }
+}
+
+@media screen and (min-width: 1200px) {
+    
+    body  {
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+}
